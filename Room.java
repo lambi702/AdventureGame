@@ -19,7 +19,7 @@ public class Room{
     public void printRoom(){
         System.out.println("\n----------------------------------------------------------\n");
         if(this.ennemy.getName().equals("not"))
-            System.out.println("There is "+ ConsoleColors.GREEN+"no ennemy "+ ConsoleColors.RESET+"in the room");
+            System.out.println("There is "+ ConsoleColors.GREEN+" no ennemy "+ ConsoleColors.RESET+" in the room");
         else{
             System.out.println("You encounter an ennemy named " + ConsoleColors.RED + this.ennemy.getName() + ConsoleColors.RESET);
             this.ennemy.presentation();
@@ -38,11 +38,11 @@ public class Room{
         if(this.neighborsDoors[2] == 1)
             System.out.println(" - South (opened)");
         else if(this.neighborsDoors[2] == 2)
-            System.out.println(" - South (locked, Key : "+ this.doors[0].getKey()+")");
+            System.out.println(" - South (locked, Key : "+ this.doors[2].getKey()+")");
         if(this.neighborsDoors[3] == 1)
             System.out.println(" - West (opened)");
         else if(this.neighborsDoors[3] == 2)
-            System.out.println(" - West (locked, Key : "+ this.doors[0].getKey()+")");
+            System.out.println(" - West (locked, Key : "+ this.doors[3].getKey()+")");
         
         if(this.items.size()==0)
             System.out.println("\nThere is nothing on the ground.");

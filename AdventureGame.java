@@ -8,14 +8,14 @@ public class AdventureGame{
         int [][] maze = 
             {
             {1,1,1,1,1,1,1,1,1,1,1,1,1},
-            {1,0,1,0,1,0,1,0,0,0,0,0,1},
-            {1,0,1,0,0,0,1,0,1,1,1,0,1},
-            {1,0,0,0,1,1,1,0,0,0,0,0,1},
-            {1,0,1,0,0,0,0,0,1,1,1,0,1},
-            {1,0,1,0,1,1,1,0,1,0,0,0,1},
-            {1,0,1,0,1,0,0,0,1,1,1,0,1},
-            {1,0,1,0,1,1,1,0,1,0,1,0,1},
-            {1,0,0,0,0,0,0,0,0,0,1,0,1},
+            {1,0,0,0,0,0,1,1,1,0,0,0,1},
+            {1,0,1,1,0,1,1,0,0,0,1,0,1},
+            {1,0,1,1,0,0,0,0,1,0,1,0,1},
+            {1,0,0,0,1,1,1,0,1,0,1,0,1},
+            {1,0,1,0,0,1,1,0,1,0,1,0,1},
+            {1,0,1,1,0,0,0,0,1,0,1,0,1},
+            {1,0,0,1,0,1,1,0,1,0,1,0,1},
+            {1,1,0,1,0,1,1,0,1,0,1,0,1},
             {1,1,1,1,1,1,1,1,1,1,1,1,1}
             };
 
@@ -124,7 +124,7 @@ public class AdventureGame{
         Shield gShield = new Shield("GoldShield",10,"Protects you for your more difficult fights",1.5);
         Shield dShield = new Shield("DiamondShield",15,"Protects you for your hardest fights",2.0);
 
-        Armor iArmor = new Armor("IronArmor",0.25,"Protects you against your first goblins");
+        Armor iArmor = new Armor("IronArmor",0.10,"Protects you against your first goblins");
         Armor gArmor = new Armor("GoldArmor",0.5,"Necessary against stronger creatures");
         Armor dArmor = new Armor("DiamondArmor",0.75,"Useful against the big boss");
         
@@ -133,6 +133,9 @@ public class AdventureGame{
         Key key2 = new Key("Key2","A great reward is hidden behind this door");
         Key key3 = new Key("Key3","This secret item will be useful against strong ennemies");
         Key key4 = new Key("Key4","The best thing you can hope for");
+        Key key5 = new Key("Key5", "An essential key");
+        Key key6 = new Key("Key6", "An essential key");
+
 
         // --- Food & Potion ---
         Potion potion1 = new Potion("BasePotion",15,"Great for a little boost of HP during a fight");
@@ -141,57 +144,59 @@ public class AdventureGame{
         
         Food bread = new Food("Bread",10,"Base food");
         Food chicken = new Food("Chicken",15,"To help you after a fight");
-        Food beef = new Food("Beef",20,"You lust be getting ready for the big one");
+        Food beef = new Food("Beef",40,"You lust be getting ready for the big one");
 
         // --- Ennemies ---
         Vector<Item> loot1 = new Vector<Item>();
         Vector<Item> loot2 = new Vector<Item>();
         Vector<Item> loot3 = new Vector<Item>();
-        Vector<Item> loot4 = new Vector<Item>();
 
         loot1.add(potion1);
-        loot1.add(bread);
+        loot1.add(key1);
 
-        loot2.add(key2);
-        loot2.add(beef);
+        loot2.add(potion3);
+        loot2.add(key6);
 
-        loot3.add(key3);
-        loot3.add(potion3);
 
         Ennemy ennemy1 = new Ennemy("Goblin",30,5,loot1,"The weakest creature, should be a piece of cake",false);
         Ennemy ennemy2 = new Ennemy("Orc",50,10,loot2,"Modified goblin, faster ans stronger",false);
-        Ennemy ennemy3 = new Ennemy("Giant orc",80,20,loot3,"Make sure you have the good equipement when trying to defeat this one",false);
-        Ennemy ennemy4 = new Ennemy("Boss",100,30,loot4,"Your final test",true);
+        Ennemy ennemy3 = new Ennemy("Boss",200,30,loot3,"Your final test",true);
 
         // --- Created instances on grid ---
-        Rooms[1][0].addItem(iSword);
-        Rooms[2][0].addItem(iShield);
-        Rooms[2][2].addItem(iArmor);
+        Rooms[0][0].addItem(iSword);
+        Rooms[0][0].addItem(iShield);
+        Rooms[0][0].addItem(iArmor);
 
-        Rooms[0][4].addItem(gShield);
-        Rooms[3][3].addItem(gArmor);
-        Rooms[5][4].addItem(gSword);
+        Rooms[1][8].addItem(gSword);
+        Rooms[5][5].addItem(gShield);
+        Rooms[4][3].addItem(gArmor);
+        
+        Rooms[7][1].addItem(dSword);
+        Rooms[5][10].addItem(dShield);
+        Rooms[2][10].addItem(dArmor);
+        
+        Rooms[0][0].addItem(chicken);
+        Rooms[2][4].addItem(bread);
+        Rooms[4][10].addItem(beef);
 
-        Rooms[6][8].addItem(dArmor);
-        Rooms[4][8].addItem(dSword);
-        Rooms[4][9].addItem(dShield);
+        Rooms[6][1].addItem(key2);
+        Rooms[3][1].addItem(key3);
+        Rooms[7][6].addItem(key4);
+        Rooms[7][6].addItem(key5);
 
-        Rooms[0][4].addItem(potion2);
+        Rooms[3][6].addItem(potion2);
 
-        Rooms[0][2].addItem(chicken);
 
-        Rooms[7][0].addItem(key1);
-        Rooms[0][10].addItem(key4);
+        Rooms[0][3].setLockedDoor("Key1","South");
+        Rooms[3][0].setLockedDoor("Key2","East");
+        Rooms[6][1].setLockedDoor("Key3","South");
+        Rooms[5][6].setLockedDoor("Key4","West");
+        Rooms[1][7].setLockedDoor("Key5", "East");
+        Rooms[3][10].setLockedDoor("Key6", "South");
 
-        Rooms[1][2].setLockedDoor("Key1","East");
-        Rooms[5][6].setLockedDoor("Key2","West");
-        Rooms[7][6].setLockedDoor("Key3","East");
-        Rooms[4][10].setLockedDoor("Key4","West");
-
-        Rooms[2][1].setEnemyRoom(ennemy1);
-        Rooms[3][6].setEnemyRoom(ennemy2);
-        Rooms[2][10].setEnemyRoom(ennemy3);
-        Rooms[7][10].setEnemyRoom(ennemy4);
+        Rooms[0][4].setEnemyRoom(ennemy1);
+        Rooms[0][10].setEnemyRoom(ennemy2);
+        Rooms[7][10].setEnemyRoom(ennemy3);
 
         System.out.println("Rooms loaded");
         return Rooms;
