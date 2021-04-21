@@ -17,6 +17,7 @@ public class Ennemy{
         this.power = power;
         this.loot = loot;
         this.constHP = HP;
+        this.presentation = presentation;
         this.finalBoss = finalBoss;
     }
 

@@ -158,7 +158,7 @@ public class AdventureGame{
         loot3.add(key3);
         loot3.add(potion3);
 
-        Ennemy ennemy1 = new Ennemy("Goblin",30,5,loot1,"The weakest creature, should be a piece of cake",true);
+        Ennemy ennemy1 = new Ennemy("Goblin",30,5,loot1,"The weakest creature, should be a piece of cake",false);
         Ennemy ennemy2 = new Ennemy("Orc",50,10,loot2,"Modified goblin, faster ans stronger",false);
         Ennemy ennemy3 = new Ennemy("Giant orc",80,20,loot3,"Make sure you have the good equipement when trying to defeat this one",false);
         Ennemy ennemy4 = new Ennemy("Boss",100,30,loot4,"Your final test",true);

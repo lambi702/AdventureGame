@@ -23,7 +23,7 @@ public class Room{
         else{
             System.out.println("You encounter an ennemy named " + ConsoleColors.RED + this.ennemy.getName() + ConsoleColors.RESET);
             this.ennemy.presentation();
-            System.out.println("\nTo start fight use command Fight <name>");
+            System.out.println("\nTo start fight use command Fight");
         }
 
         System.out.println("\nThere are doors to : ");
