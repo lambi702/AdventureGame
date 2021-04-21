@@ -255,15 +255,15 @@ public class AdventureGame{
         return str;
     }
     public static void help(){
-        System.out.println("\nAvailable commands :");
-        System.out.println("\n- Turn (left | right) : Changes player orientation");
+        System.out.println("\nAvailable commands :\n");
+        System.out.println("- Turn (left | right) : Changes player orientation");
         System.out.println("- Move : makes the player go forward (if possible)");
         System.out.println("- Help : shows available commands");
         System.out.println("- Take <item> : take an item on the ground into your inventory");
         System.out.println("- Equip <item> : equip item from inventory to active stuff (only weapons,shields and armors)");
         System.out.println("- Inventory : display inventory\n");
         System.out.println("- Stuff : display stuff\n");
-        System.out.println("- Fight <name> : enter fight with ennemy in room");
+        System.out.println("- Fight : enter fight with ennemy in room");
         System.out.println("- Unlock with <keyname> : unlock locked door with key named <keyname>\n");
         System.out.println("- Info <Item> : display information on item in inventory (not applicable to stuff)\n");
         System.out.println("- Eat <Food> : eat food and raise HP");
