@@ -1,5 +1,4 @@
 public class Armor extends Item{
-    private String name;
     private double protection;
     private String info;
 

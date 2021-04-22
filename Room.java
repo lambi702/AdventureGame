@@ -95,7 +95,6 @@ public class Room{
     
     public void unlockDoor(int orientation){
         this.neighborsDoors[orientation]=1;
-        this.doors[orientation].openDoor();
 
     }
 
@@ -109,7 +108,7 @@ public class Room{
             intOrientation = 2;
         else if (orientation.equals("West"))
             intOrientation = 3;
-        this.doors[intOrientation] = new Door(true, key);
+        this.doors[intOrientation] = new Door( key);
         this.neighborsDoors[intOrientation] = 2;
     }
     public int getDoorState(int orientation){

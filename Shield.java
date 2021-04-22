@@ -1,5 +1,4 @@
 public class Shield extends Item{
-    private String name;
     private int protectionTurns;
     private String info;
     private double returnDamage;

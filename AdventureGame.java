@@ -106,7 +106,7 @@ public class AdventureGame{
                 
                 Vector<Door> doors = new Vector<Door>();
                 for(int k = 0; k < neighbors.length; k++){
-                    Door newDoor = new Door(false,"0");
+                    Door newDoor = new Door("0");
                     doors.add(newDoor);
                 }
                 

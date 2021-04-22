@@ -1,5 +1,4 @@
 public class Key extends Item{
-    private String name;
     private String info;
     
     public Key(String name, String info){

@@ -1,5 +1,4 @@
 public class Potion extends Item{
-    private String name;
     private int regen;
     private String info;
 
