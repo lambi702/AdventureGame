@@ -197,8 +197,7 @@ public class AdventureGame{
         Rooms[0][4].setEnemyRoom(ennemy1);
         Rooms[0][10].setEnemyRoom(ennemy2);
         Rooms[7][10].setEnemyRoom(ennemy3);
-
-        System.out.println("Rooms loaded");
+        
         return Rooms;
     }
 

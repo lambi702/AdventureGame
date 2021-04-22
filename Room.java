@@ -76,7 +76,7 @@ public class Room{
     public Item getRoomItems(String name){
         for(Item i : this.items){
             String itemID = i.getName();
-            if(itemID.equals(name))
+            if(itemID.equalsIgnoreCase(name))
                 return i;
         }
         return null;
