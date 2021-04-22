@@ -3,11 +3,11 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Player {
-    String name, orientation;
-    int HP;
-    Vector<Item> inventory = new Vector<Item>();
-    Item[] stuff = new Item[3];
-    Room current;
+    private String name, orientation;
+    private int HP;
+    private Vector<Item> inventory = new Vector<Item>();
+    private Item[] stuff = new Item[3];
+    private Room current;
 
     public Player(String str){
         this.name = str;
@@ -393,7 +393,7 @@ public class Player {
             playerHP = this.getHP();
             if(monsterHP <= 0){
                 if (monster.isBoss()){
-                    System.out.println(ConsoleColors.YELLOW + "You are an incredible fighter. You just kill the final "+ ConsoleColors.RED+"MONSTER "+ConsoleColors.YELLOW+"\nThe game is finished and you can be Happy." +ConsoleColors.RESET);
+                    System.out.println(ConsoleColors.YELLOW + "You are an incredible fighter" + this.name + ". You just kill the final "+ ConsoleColors.RED+"MONSTER "+ConsoleColors.YELLOW+"\nThe game is finished and you can be Happy." +ConsoleColors.RESET);
                     System.exit(0);
                 }
                 System.out.println(ConsoleColors.GREEN+ "You defeated the monster, well done, loot added to your inventory !" + ConsoleColors.RESET); 

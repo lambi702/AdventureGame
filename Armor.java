@@ -1,7 +1,7 @@
 public class Armor extends Item{
-    String name;
-    double protection;
-    String info;
+    private String name;
+    private double protection;
+    private String info;
 
     public Armor(String name, double protection, String info){
         super(name);

@@ -1,7 +1,7 @@
 public class Potion extends Item{
-    String name;
-    int regen;
-    String info;
+    private String name;
+    private int regen;
+    private String info;
 
     public Potion(String name, int regen, String info){
         super(name);

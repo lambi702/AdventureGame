@@ -1,8 +1,8 @@
 public class Shield extends Item{
-    String name;
-    int protectionTurns;
-    String info;
-    double returnDamage;
+    private String name;
+    private int protectionTurns;
+    private String info;
+    private double returnDamage;
     
     public Shield(String name, int protectionTurns, String info, double returnDamage){
         super(name);

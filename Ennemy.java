@@ -1,11 +1,11 @@
 import java.util.Vector;
 
 public class Ennemy{
-    String name;
-    int HP, power, constHP;
-    Vector<Item> loot;
-    String presentation;
-    boolean finalBoss;
+    private String name;
+    private int HP, power, constHP;
+    private Vector<Item> loot;
+    private String presentation;
+    private boolean finalBoss;
 
     public Ennemy(String name){
         this.name = name;

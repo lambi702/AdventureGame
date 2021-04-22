@@ -1,6 +1,6 @@
 public class Key extends Item{
-    String name;
-    String info;
+    private String name;
+    private String info;
     
     public Key(String name, String info){
         super(name);

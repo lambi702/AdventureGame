@@ -1,7 +1,7 @@
 public class Food extends Item{
-    String name;
-    int regen;
-    String info;
+    private String name;
+    private int regen;
+    private String info;
 
     public Food(String name, int regen, String info){
         super(name);

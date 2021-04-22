@@ -1,11 +1,11 @@
 import java.util.Vector;
 
 public class Room{
-    int i,j;
-    int[] neighborsDoors; // in order north, east, south, west / 0 = wall , 1 = door, 2 = locked door;
-    Door[] doors; //  in order north, east, south, west , null if no door
-    Vector<Item> items = new Vector<Item>();
-    Ennemy ennemy;
+    private int i,j;
+    private int[] neighborsDoors; // in order north, east, south, west / 0 = wall , 1 = door, 2 = locked door;
+    private Door[] doors; //  in order north, east, south, west , null if no door
+    private Vector<Item> items = new Vector<Item>();
+    private Ennemy ennemy;
 
     public Room(int i, int j, int[] neighborsDoors, Vector<Item> items){
         this.i = i;
